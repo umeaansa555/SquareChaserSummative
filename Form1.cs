@@ -178,12 +178,20 @@ namespace SquareChaser
             }
 
 
-            ////update position of objects
-            if(player1.IntersectsWith(goal) || player2.IntersectsWith(goal))
+            ////update position of objects + adding points
+            if(player1.IntersectsWith(goal))
             {
+                player1Score++;
                 goal.X = positionGen.Next(0, 381);
                 goal.Y = positionGen.Next(0, 381);
             }
+            if (player2.IntersectsWith(goal))
+            {
+                player2Score++;
+                goal.X = positionGen.Next(0, 381);
+                goal.Y = positionGen.Next(0, 381);
+            }
+
 
             if (player1.IntersectsWith(speedBoost))
             {
