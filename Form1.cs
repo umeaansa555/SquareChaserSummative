@@ -35,6 +35,7 @@ namespace SquareChaser
         SolidBrush blueBrush = new SolidBrush(Color.DodgerBlue);
         SolidBrush redBrush = new SolidBrush(Color.Red);
         SolidBrush whiteBrush = new SolidBrush(Color.White);
+        SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
 
         public Form1()
         {
@@ -103,6 +104,15 @@ namespace SquareChaser
                     rightArrowDown = false;
                     break;
             }
+
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.FillRectangle(redBrush, player1);
+            e.Graphics.FillRectangle(blueBrush, player2);
+            e.Graphics.FillRectangle(whiteBrush, goal);
+            e.Graphics.FillRectangle(yellowBrush, speedBoost);
 
         }
     }
