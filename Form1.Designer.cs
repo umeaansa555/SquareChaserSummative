@@ -33,6 +33,7 @@ namespace SquareChaser
             this.P1Score = new System.Windows.Forms.Label();
             this.P2Score = new System.Windows.Forms.Label();
             this.engine = new System.Windows.Forms.Timer(this.components);
+            this.winLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // P1Score
@@ -65,12 +66,26 @@ namespace SquareChaser
             this.engine.Interval = 20;
             this.engine.Tick += new System.EventHandler(this.engine_Tick);
             // 
+            // winLabel
+            // 
+            this.winLabel.AutoSize = true;
+            this.winLabel.BackColor = System.Drawing.Color.Transparent;
+            this.winLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.winLabel.Location = new System.Drawing.Point(142, 171);
+            this.winLabel.Name = "winLabel";
+            this.winLabel.Size = new System.Drawing.Size(97, 25);
+            this.winLabel.TabIndex = 2;
+            this.winLabel.Text = "winLabel";
+            this.winLabel.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(384, 361);
+            this.Controls.Add(this.winLabel);
             this.Controls.Add(this.P2Score);
             this.Controls.Add(this.P1Score);
             this.DoubleBuffered = true;
@@ -89,6 +104,7 @@ namespace SquareChaser
         private System.Windows.Forms.Label P1Score;
         private System.Windows.Forms.Label P2Score;
         private System.Windows.Forms.Timer engine;
+        private System.Windows.Forms.Label winLabel;
     }
 }
 

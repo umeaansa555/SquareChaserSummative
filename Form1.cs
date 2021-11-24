@@ -208,6 +208,19 @@ namespace SquareChaser
                 speedBoost.Y = positionGen.Next(0, 381);
             }
 
+            // check score and stop game if either player is at 3 
+            if (player1Score == 3)
+            {
+                engine.Enabled = false;
+                winLabel.Visible = true;
+                winLabel.Text = "Player 1 Wins!!";
+            }
+            else if (player2Score == 3)
+            {
+                engine.Enabled = false;
+                winLabel.Visible = true;
+                winLabel.Text = "Player 2 Wins!!";
+            }
 
             Refresh();
         }
