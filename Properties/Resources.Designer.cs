@@ -63,9 +63,27 @@ namespace SquareChaser.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _263133__pan14__tone_beep {
+            get {
+                return ResourceManager.GetStream("_263133__pan14__tone_beep", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream _270331__littlerobotsoundfactory__jingle_achievement_00 {
             get {
                 return ResourceManager.GetStream("_270331__littlerobotsoundfactory__jingle_achievement_00", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _271163__alienxxx__beep_008 {
+            get {
+                return ResourceManager.GetStream("_271163__alienxxx__beep_008", resourceCulture);
             }
         }
         

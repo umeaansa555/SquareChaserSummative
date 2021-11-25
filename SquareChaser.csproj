@@ -95,5 +95,11 @@
   <ItemGroup>
     <None Include="Resources\270331__littlerobotsoundfactory__jingle-achievement-00.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\263133__pan14__tone-beep.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\271163__alienxxx__beep-008.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

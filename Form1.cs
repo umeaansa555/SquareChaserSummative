@@ -47,6 +47,10 @@ namespace SquareChaser
         SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
 
         SoundPlayer boost = new SoundPlayer(Properties.Resources._445109__breviceps__mud_splat);
+        SoundPlayer point = new SoundPlayer(Properties.Resources._271163__alienxxx__beep_008);
+        SoundPlayer win1 = new SoundPlayer(Properties.Resources._448266__henryrichard__sfx_clear);
+        SoundPlayer win2 = new SoundPlayer(Properties.Resources._511385__mrthenoronha__power_up_8_bit);
+        
 
         public Form1()
         {
@@ -189,12 +193,14 @@ namespace SquareChaser
                 player1Score++;
                 goal.X = positionGen.Next(0, 381);
                 goal.Y = positionGen.Next(0, 381);
+                point.Play();
             }
             if (player2.IntersectsWith(goal))
             {
                 player2Score++;
                 goal.X = positionGen.Next(0, 381);
                 goal.Y = positionGen.Next(0, 381);
+                point.Play();
             }
 
 
@@ -223,6 +229,7 @@ namespace SquareChaser
                 P1Score.Text = $"{player1Score}";
                 P2Score.Text = $"{player2Score}";
                 winLabel.Text = "Player 1 Wins!!";
+                win1.Play();
             }
             else if (player2Score == 5)
             {
@@ -231,6 +238,7 @@ namespace SquareChaser
                 P1Score.Text = $"{player1Score}";
                 P2Score.Text = $"{player2Score}";
                 winLabel.Text = "Player 2 Wins!!";
+                win2.Play();
             }
 
             Refresh();
