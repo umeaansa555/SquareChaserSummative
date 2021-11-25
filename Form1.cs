@@ -17,8 +17,8 @@ namespace SquareChaser
     public partial class Form1 : Form
     {
 
-        Rectangle player1 = new Rectangle(0, 0, 20, 20);
-        Rectangle player2 = new Rectangle(30, 0, 20, 20);
+        Rectangle player1 = new Rectangle(190, 190, 20, 20);
+        Rectangle player2 = new Rectangle(210, 210, 20, 20);
         Rectangle speedBoost = new Rectangle(0, 17, 10, 10);
         Rectangle goal = new Rectangle(0, 49, 10, 10);
 
@@ -143,7 +143,6 @@ namespace SquareChaser
             }
 
 
-            ////in progress. right works, left has problems
             if (aDown == true && player1.X > 0)
             {
                 player1.X -= player1Speed;
@@ -167,7 +166,6 @@ namespace SquareChaser
             }
 
 
-            ////in progress, movement works but its buggy
             if (leftArrowDown == true && player2.X > 0)
             {
                 player2.X -= player2Speed;
@@ -179,7 +177,11 @@ namespace SquareChaser
 
 
             ////update position of objects + adding points
-            if(player1.IntersectsWith(goal))
+            
+            P1Score.Text = $"{player1Score}";
+            P2Score.Text = $"{player2Score}";
+
+            if (player1.IntersectsWith(goal))
             {
                 player1Score++;
                 goal.X = positionGen.Next(0, 381);
@@ -208,18 +210,22 @@ namespace SquareChaser
                 speedBoost.Y = positionGen.Next(0, 381);
             }
 
-            // check score and stop game if either player is at 3 
-            if (player1Score == 3)
+            // check score and stop game if either player is at 5
+            if (player1Score == 5)
             {
                 engine.Enabled = false;
                 winLabel.Visible = true;
-                winLabel.Text = "Player 1 Wins!!";
+                P1Score.Text = $"{player1Score}";
+                P2Score.Text = $"{player2Score}";
+                winLabel.Text = "Player 1 Wins!!";
             }
-            else if (player2Score == 3)
+            else if (player2Score == 5)
             {
                 engine.Enabled = false;
                 winLabel.Visible = true;
-                winLabel.Text = "Player 2 Wins!!";
+                P1Score.Text = $"{player1Score}";
+                P2Score.Text = $"{player2Score}";
+                winLabel.Text = "Player 2 Wins!!";
             }
 
             Refresh();

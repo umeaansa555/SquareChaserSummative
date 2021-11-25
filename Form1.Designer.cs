@@ -38,27 +38,27 @@ namespace SquareChaser
             // 
             // P1Score
             // 
-            this.P1Score.AutoSize = true;
             this.P1Score.BackColor = System.Drawing.Color.Transparent;
             this.P1Score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.P1Score.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.P1Score.Location = new System.Drawing.Point(82, 9);
+            this.P1Score.ForeColor = System.Drawing.Color.Red;
+            this.P1Score.Location = new System.Drawing.Point(89, 10);
             this.P1Score.Name = "P1Score";
             this.P1Score.Size = new System.Drawing.Size(94, 25);
             this.P1Score.TabIndex = 0;
             this.P1Score.Text = "P1Score";
+            this.P1Score.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // P2Score
             // 
-            this.P2Score.AutoSize = true;
             this.P2Score.BackColor = System.Drawing.Color.Transparent;
             this.P2Score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.P2Score.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.P2Score.Location = new System.Drawing.Point(182, 9);
+            this.P2Score.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.P2Score.Location = new System.Drawing.Point(189, 10);
             this.P2Score.Name = "P2Score";
             this.P2Score.Size = new System.Drawing.Size(94, 25);
             this.P2Score.TabIndex = 1;
             this.P2Score.Text = "P2Score";
+            this.P2Score.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // engine
             // 
@@ -71,24 +71,26 @@ namespace SquareChaser
             this.winLabel.AutoSize = true;
             this.winLabel.BackColor = System.Drawing.Color.Transparent;
             this.winLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.winLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.winLabel.Location = new System.Drawing.Point(142, 171);
+            this.winLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.winLabel.Location = new System.Drawing.Point(123, 150);
             this.winLabel.Name = "winLabel";
             this.winLabel.Size = new System.Drawing.Size(97, 25);
             this.winLabel.TabIndex = 2;
             this.winLabel.Text = "winLabel";
+            this.winLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.winLabel.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.ClientSize = new System.Drawing.Size(384, 361);
             this.Controls.Add(this.winLabel);
             this.Controls.Add(this.P2Score);
             this.Controls.Add(this.P1Score);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
