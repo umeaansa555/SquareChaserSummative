@@ -35,6 +35,7 @@ namespace SquareChaser
             this.P2Score = new System.Windows.Forms.Label();
             this.engine = new System.Windows.Forms.Timer(this.components);
             this.winLabel = new System.Windows.Forms.Label();
+            this.replayButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // P1Score
@@ -69,16 +70,29 @@ namespace SquareChaser
             // 
             // winLabel
             // 
-            this.winLabel.AutoSize = true;
             this.winLabel.BackColor = System.Drawing.Color.Transparent;
             this.winLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.winLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.winLabel.Location = new System.Drawing.Point(134, 168);
+            this.winLabel.Location = new System.Drawing.Point(96, 185);
             this.winLabel.Name = "winLabel";
-            this.winLabel.Size = new System.Drawing.Size(97, 25);
+            this.winLabel.Size = new System.Drawing.Size(198, 25);
             this.winLabel.TabIndex = 2;
             this.winLabel.Text = "winLabel";
+            this.winLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.winLabel.Visible = false;
+            // 
+            // replayButton
+            // 
+            this.replayButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.replayButton.Location = new System.Drawing.Point(0, 370);
+            this.replayButton.MaximumSize = new System.Drawing.Size(70, 30);
+            this.replayButton.Name = "replayButton";
+            this.replayButton.Size = new System.Drawing.Size(70, 30);
+            this.replayButton.TabIndex = 3;
+            this.replayButton.Text = "Play Again";
+            this.replayButton.UseVisualStyleBackColor = true;
+            this.replayButton.Visible = false;
+            this.replayButton.Click += new System.EventHandler(this.replayButton_Click);
             // 
             // Form1
             // 
@@ -86,6 +100,7 @@ namespace SquareChaser
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.ClientSize = new System.Drawing.Size(400, 400);
+            this.Controls.Add(this.replayButton);
             this.Controls.Add(this.winLabel);
             this.Controls.Add(this.P2Score);
             this.Controls.Add(this.P1Score);
@@ -98,7 +113,6 @@ namespace SquareChaser
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -108,6 +122,7 @@ namespace SquareChaser
         private System.Windows.Forms.Label P2Score;
         private System.Windows.Forms.Timer engine;
         private System.Windows.Forms.Label winLabel;
+        private System.Windows.Forms.Button replayButton;
     }
 }
 

@@ -230,6 +230,8 @@ namespace SquareChaser
                 P2Score.Text = $"{player2Score}";
                 winLabel.Text = "Player 1 Wins!!";
                 win1.Play();
+                replayButton.Visible = true;
+
             }
             else if (player2Score == 5)
             {
@@ -239,9 +241,15 @@ namespace SquareChaser
                 P2Score.Text = $"{player2Score}";
                 winLabel.Text = "Player 2 Wins!!";
                 win2.Play();
+                replayButton.Visible = true;
             }
 
             Refresh();
+        }
+
+        private void replayButton_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }
