@@ -41,11 +41,11 @@ namespace SquareChaser
             this.P1Score.BackColor = System.Drawing.Color.Transparent;
             this.P1Score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.P1Score.ForeColor = System.Drawing.Color.Red;
-            this.P1Score.Location = new System.Drawing.Point(89, 10);
+            this.P1Score.Location = new System.Drawing.Point(160, 10);
             this.P1Score.Name = "P1Score";
-            this.P1Score.Size = new System.Drawing.Size(94, 25);
+            this.P1Score.Size = new System.Drawing.Size(25, 25);
             this.P1Score.TabIndex = 0;
-            this.P1Score.Text = "P1Score";
+            this.P1Score.Text = "0";
             this.P1Score.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // P2Score
@@ -53,11 +53,11 @@ namespace SquareChaser
             this.P2Score.BackColor = System.Drawing.Color.Transparent;
             this.P2Score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.P2Score.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.P2Score.Location = new System.Drawing.Point(189, 10);
+            this.P2Score.Location = new System.Drawing.Point(195, 10);
             this.P2Score.Name = "P2Score";
-            this.P2Score.Size = new System.Drawing.Size(94, 25);
+            this.P2Score.Size = new System.Drawing.Size(25, 25);
             this.P2Score.TabIndex = 1;
-            this.P2Score.Text = "P2Score";
+            this.P2Score.Text = "0";
             this.P2Score.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // engine
@@ -72,12 +72,11 @@ namespace SquareChaser
             this.winLabel.BackColor = System.Drawing.Color.Transparent;
             this.winLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.winLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.winLabel.Location = new System.Drawing.Point(123, 150);
+            this.winLabel.Location = new System.Drawing.Point(134, 168);
             this.winLabel.Name = "winLabel";
             this.winLabel.Size = new System.Drawing.Size(97, 25);
             this.winLabel.TabIndex = 2;
             this.winLabel.Text = "winLabel";
-            this.winLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.winLabel.Visible = false;
             // 
             // Form1
