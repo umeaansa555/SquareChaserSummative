@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Everaldo-Crystal-Clear-App-kcmdf-cubes.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\511385__mrthenoronha__power-up-8-bit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\445109__breviceps__mud-splat.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\448266__henryrichard__sfx-clear.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\270331__littlerobotsoundfactory__jingle-achievement-00.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

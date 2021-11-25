@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 // Square Chaser: 2 player game
 // A. Ansari midterm summative Nov 2021
@@ -44,6 +45,8 @@ namespace SquareChaser
         SolidBrush redBrush = new SolidBrush(Color.Red);
         SolidBrush whiteBrush = new SolidBrush(Color.White);
         SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
+
+        SoundPlayer boost = new SoundPlayer(Properties.Resources._445109__breviceps__mud_splat);
 
         public Form1()
         {
@@ -201,6 +204,7 @@ namespace SquareChaser
                 
                 speedBoost.X = positionGen.Next(0, 381);
                 speedBoost.Y = positionGen.Next(0, 381);
+                boost.Play();
             }
             if (player2.IntersectsWith(speedBoost))
             {
@@ -208,6 +212,7 @@ namespace SquareChaser
 
                 speedBoost.X = positionGen.Next(0, 381);
                 speedBoost.Y = positionGen.Next(0, 381);
+                boost.Play();
             }
 
             // check score and stop game if either player is at 5
