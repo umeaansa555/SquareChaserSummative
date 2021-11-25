@@ -36,14 +36,15 @@ namespace SquareChaser
             this.engine = new System.Windows.Forms.Timer(this.components);
             this.winLabel = new System.Windows.Forms.Label();
             this.replayButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // P1Score
             // 
             this.P1Score.BackColor = System.Drawing.Color.Transparent;
-            this.P1Score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.P1Score.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.P1Score.ForeColor = System.Drawing.Color.Red;
-            this.P1Score.Location = new System.Drawing.Point(160, 10);
+            this.P1Score.Location = new System.Drawing.Point(165, 9);
             this.P1Score.Name = "P1Score";
             this.P1Score.Size = new System.Drawing.Size(25, 25);
             this.P1Score.TabIndex = 0;
@@ -53,9 +54,9 @@ namespace SquareChaser
             // P2Score
             // 
             this.P2Score.BackColor = System.Drawing.Color.Transparent;
-            this.P2Score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.P2Score.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.P2Score.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.P2Score.Location = new System.Drawing.Point(195, 10);
+            this.P2Score.Location = new System.Drawing.Point(200, 9);
             this.P2Score.Name = "P2Score";
             this.P2Score.Size = new System.Drawing.Size(25, 25);
             this.P2Score.TabIndex = 1;
@@ -71,9 +72,9 @@ namespace SquareChaser
             // winLabel
             // 
             this.winLabel.BackColor = System.Drawing.Color.Transparent;
-            this.winLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winLabel.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.winLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.winLabel.Location = new System.Drawing.Point(96, 185);
+            this.winLabel.Location = new System.Drawing.Point(93, 185);
             this.winLabel.Name = "winLabel";
             this.winLabel.Size = new System.Drawing.Size(198, 25);
             this.winLabel.TabIndex = 2;
@@ -85,7 +86,7 @@ namespace SquareChaser
             // 
             this.replayButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.replayButton.Location = new System.Drawing.Point(0, 370);
-            this.replayButton.MaximumSize = new System.Drawing.Size(70, 30);
+            this.replayButton.MaximumSize = new System.Drawing.Size(70, 40);
             this.replayButton.Name = "replayButton";
             this.replayButton.Size = new System.Drawing.Size(70, 30);
             this.replayButton.TabIndex = 3;
@@ -94,12 +95,26 @@ namespace SquareChaser
             this.replayButton.Visible = false;
             this.replayButton.Click += new System.EventHandler(this.replayButton_Click);
             // 
+            // exitButton
+            // 
+            this.exitButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.exitButton.Location = new System.Drawing.Point(0, 340);
+            this.exitButton.MaximumSize = new System.Drawing.Size(70, 40);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(70, 30);
+            this.exitButton.TabIndex = 4;
+            this.exitButton.Text = "Exit Game";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Visible = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.ClientSize = new System.Drawing.Size(400, 400);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.replayButton);
             this.Controls.Add(this.winLabel);
             this.Controls.Add(this.P2Score);
@@ -108,6 +123,7 @@ namespace SquareChaser
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Square Chaser";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -123,6 +139,7 @@ namespace SquareChaser
         private System.Windows.Forms.Timer engine;
         private System.Windows.Forms.Label winLabel;
         private System.Windows.Forms.Button replayButton;
+        private System.Windows.Forms.Button exitButton;
     }
 }
 

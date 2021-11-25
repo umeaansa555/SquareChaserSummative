@@ -18,8 +18,8 @@ namespace SquareChaser
     public partial class Form1 : Form
     {
 
-        Rectangle player1 = new Rectangle(190, 190, 20, 20);
-        Rectangle player2 = new Rectangle(210, 210, 20, 20);
+        Rectangle player1 = new Rectangle(180, 200, 20, 20);
+        Rectangle player2 = new Rectangle(200, 200, 20, 20);
         Rectangle speedBoost = new Rectangle(0, 17, 10, 10);
         Rectangle goal = new Rectangle(0, 49, 10, 10);
 
@@ -29,8 +29,8 @@ namespace SquareChaser
         int player1Score = 0;
         int player2Score = 0;
 
-        int player1Speed = 4;
-        int player2Speed = 4;
+        int player1Speed = 6;
+        int player2Speed = 6;
 
         bool wDown = false;
         bool sDown = false;
@@ -48,6 +48,7 @@ namespace SquareChaser
 
         SoundPlayer boost = new SoundPlayer(Properties.Resources._445109__breviceps__mud_splat);
         SoundPlayer point = new SoundPlayer(Properties.Resources._271163__alienxxx__beep_008);
+        SoundPlayer error = new SoundPlayer(Properties.Resources._188013__isaac200000__error);
         SoundPlayer win1 = new SoundPlayer(Properties.Resources._448266__henryrichard__sfx_clear);
         SoundPlayer win2 = new SoundPlayer(Properties.Resources._511385__mrthenoronha__power_up_8_bit);
         
@@ -206,19 +207,33 @@ namespace SquareChaser
 
             if (player1.IntersectsWith(speedBoost))
             {
-                player1Speed += 4;
-                
-                speedBoost.X = positionGen.Next(0, 381);
-                speedBoost.Y = positionGen.Next(0, 381);
-                boost.Play();
-            }
-            if (player2.IntersectsWith(speedBoost))
-            {
-                player2Speed += 4;
+                if (player1Speed <= 12)
+                {
+                    player1Speed += 2;
+                    boost.Play();
+                }
+                else
+                {
+                    error.Play();
+                }
 
                 speedBoost.X = positionGen.Next(0, 381);
                 speedBoost.Y = positionGen.Next(0, 381);
-                boost.Play();
+            }
+            if (player2.IntersectsWith(speedBoost))
+            {
+                if (player2Speed <= 12)
+                {
+                    player2Speed += 2;
+                    boost.Play();
+                }
+                else
+                {
+                    error.Play();
+                }
+
+                speedBoost.X = positionGen.Next(0, 381);
+                speedBoost.Y = positionGen.Next(0, 381);
             }
 
             // check score and stop game if either player is at 5
@@ -231,6 +246,7 @@ namespace SquareChaser
                 winLabel.Text = "Player 1 Wins!!";
                 win1.Play();
                 replayButton.Visible = true;
+                exitButton.Visible = true;
 
             }
             else if (player2Score == 5)
@@ -242,6 +258,7 @@ namespace SquareChaser
                 winLabel.Text = "Player 2 Wins!!";
                 win2.Play();
                 replayButton.Visible = true;
+                exitButton.Visible = true;
             }
 
             Refresh();
@@ -250,6 +267,11 @@ namespace SquareChaser
         private void replayButton_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

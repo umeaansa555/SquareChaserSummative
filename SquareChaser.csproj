@@ -101,5 +101,8 @@
   <ItemGroup>
     <None Include="Resources\271163__alienxxx__beep-008.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\188013__isaac200000__error.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

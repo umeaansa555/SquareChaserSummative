@@ -63,6 +63,15 @@ namespace SquareChaser.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _188013__isaac200000__error {
+            get {
+                return ResourceManager.GetStream("_188013__isaac200000__error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream _263133__pan14__tone_beep {
             get {
                 return ResourceManager.GetStream("_263133__pan14__tone_beep", resourceCulture);
